@@ -1,8 +1,10 @@
-import { z } from "zod"
+import type { z } from 'zod'
 
+export type ISchema<T extends z.ZodType<string> = z.ZodType<string>> = T
 export interface IPrompt {
   systemInstruction: string
   message: string
+  schema: ISchema
 }
 
 export interface IModel {
@@ -13,12 +15,12 @@ export interface ClassificationCategory {
   [key: string]: string[]
 }
 
-export class ClassificationAgent <T extends [string, ...string[]]> {
+export class ClassificationAgent {
   constructor(
     private readonly model: IModel,
     private readonly systemInstruction: string,
     private readonly categories: ClassificationCategory,
-    private readonly schema: z.ZodEnum<T>
+    private readonly schema: ISchema,
   ) {}
 
   private buildPrompt(input: string): IPrompt {
@@ -31,6 +33,7 @@ export class ClassificationAgent <T extends [string, ...string[]]> {
     return {
       systemInstruction: `${this.systemInstruction}\n\nAvailable Categories:\n${examples}`,
       message: `Input to classify: "${input}"\nCategory:`,
+      schema: this.schema,
     }
   }
 
@@ -41,7 +44,7 @@ export class ClassificationAgent <T extends [string, ...string[]]> {
     if (typeof result === 'string') {
       return this.schema.parse(result.trim())
     }
-    
+
     return this.schema.parse(result)
   }
 }
@@ -59,7 +62,7 @@ export class ClassificationAgent <T extends [string, ...string[]]> {
 
 const categories = {
   "positive": ["I love this", "Awesome product", "Great experience"],
-  "negative": ["Poor quality", "Very disappointed", "Would not recommend"],
+  "negative": ["Poor quality", "Very disappointed",ZodEnum<T> "Would not recommend"],
   "neutral": ["Just okay", "No strong opinion", "It's average"]
 };
 

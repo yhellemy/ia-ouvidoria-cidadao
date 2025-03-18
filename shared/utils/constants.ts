@@ -1,10 +1,10 @@
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
-const ENTITIES_DETRAN = 'detran' as const
-const ENTITIES_ECONOMIA = 'economia' as const
-const ENTITIES_IPASGO = 'ipasgo' as const
-const ENTITIES_AGR = 'agr' as const
-const ENTITIES_SSP = 'ssp' as const
+const ENTITIES_DETRAN = 'DETRAN' as const
+const ENTITIES_ECONOMIA = 'ECONOMIA' as const
+const ENTITIES_IPASGO = 'IPASGO' as const
+const ENTITIES_AGR = 'AGR' as const
+const ENTITIES_SSP = 'SSP' as const
 const ENTITIES_SEAD = 'sead' as const
 
 const ACTION_NONE = 'none' as const
@@ -22,7 +22,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Com base nos órgãos publicos expostos abaixo, retorne o respectivo órgão relacionado a solicitação do usuário'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Com base nos órgãos publicos expostos abaixo, retorne o respectivo órgão relacionado a solicitação do usuário. Não justifique a resposta em nenhum caso ou use caracteres como aspas, somente retorne a sigla do respectivo orgão.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: [
@@ -69,10 +69,26 @@ export const ACTIONS_CLASSIFICATION_EXAMPLES = {
   ],
 } satisfies Record<ActionValues, string[]>
 
+export enum Vendors {
+  google = 'google',
+  gov = 'gov',
+  ollama = 'ollama',
+}
+
 export enum GoogleModelEnum {
-  thinking,
-  flash,
-  pro,
+  thinking = 'thinking',
+  flash = 'flash',
+  pro = 'pro',
+  gemma3 = 'gemma3',
+}
+
+export enum GovModelEnum {
+  llama3_1_8b = 'llama3-1:8b',
+}
+
+export enum OllamaModelEnum {
+  gemma3 = 'gemma3',
+  deepseek_r1_8b = 'deepseek-r1:8b',
 }
 
 export const GOOGLE_MODELS = {
@@ -87,6 +103,25 @@ export const GOOGLE_MODELS = {
   [GoogleModelEnum.flash]: {
     name: 'gemini-2.0-flash-exp',
     contentIndex: 0,
+  },
+  [GoogleModelEnum.gemma3]: {
+    name: 'gemma-3-27b-it',
+    contentIndex: 0,
+  },
+} as const
+
+export const GOV_MODELS = {
+  [GovModelEnum.llama3_1_8b]: {
+    name: 'llama3.1:8b',
+  },
+} as const
+
+export const OLLAMA_MODELS = {
+  [OllamaModelEnum.gemma3]: {
+    name: 'gemma3',
+  },
+  [OllamaModelEnum.deepseek_r1_8b]: {
+    name: 'deepseek-r1:8b',
   },
 } as const
 

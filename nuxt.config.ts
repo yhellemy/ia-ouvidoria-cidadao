@@ -9,11 +9,23 @@ export default defineNuxtConfig({
   runtimeConfig: {
     GEMINI_API_KEY: process.env.GEMINI_API_KEY,
     GOV_API_KEY: process.env.GOV_API_KEY,
+    OLLAMA_BASE_URL: process.env.OLLAMA_BASE_URL,
   },
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: '2024-11-01',
+  nitro: {
+    experimental: {
+      openAPI: true,
+    },
+    openAPI: {
+      route: '/_docs/openapi.json',
+      meta: {
+        title: 'ai-ouvidoria-cidadao',
+      },
+    },
+  },
   eslint: {
     config: {
       standalone: false,

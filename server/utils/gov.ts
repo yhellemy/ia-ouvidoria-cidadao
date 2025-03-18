@@ -1,4 +1,11 @@
+// import { z } from 'zod';
+// import { zodToJsonSchema } from 'zod-to-json-schema';
+
 export class GovModel implements IModel {
+  constructor(
+    public model: GovModelEnum = GovModelEnum.llama3_1_8b,
+  ) {}
+
   async process(prompt: IPrompt): Promise<string> {
     const config = useRuntimeConfig()
 
@@ -10,7 +17,7 @@ export class GovModel implements IModel {
         'Content-Type': 'application/json',
       },
       body: {
-        model: 'llama3.1:8b',
+        model: GOV_MODELS[this.model].name,
         messages: [
           {
             role: 'system',
@@ -19,13 +26,12 @@ export class GovModel implements IModel {
           {
             role: 'user',
             content: prompt.message,
-          }
+          },
         ],
         stream: false,
-        format: '',
         keep_alive: '5m',
         options: {
-          seed: 42,
+          seed: 0,
           temperature: 0.7,
           top_p: 0.9,
           top_k: 50,
@@ -36,8 +42,6 @@ export class GovModel implements IModel {
       },
     })
 
-    console.log(govRes)
-
-    return govRes.message
+    return govRes.message?.split(' ')[0]
   }
 }
