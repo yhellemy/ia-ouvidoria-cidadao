@@ -1,0 +1,1 @@
+Secretaria de Estado da Educação de Goiás. Responsável por questões relacionadas à educação básica (ensino fundamental e médio) da rede estadual, matrículas, escolas estaduais, calendário escolar, programas educacionais e gestão de professores.

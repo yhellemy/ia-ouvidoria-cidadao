@@ -1,0 +1,1 @@
+Secretaria de Segurança Pública do Estado de Goiás. Responsável por questões de segurança pública, como polícia civil, polícia militar, corpo de bombeiros, boletins de ocorrência, denúncias, e combate à criminalidade.

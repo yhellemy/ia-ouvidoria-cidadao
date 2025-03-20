@@ -1,3 +1,11 @@
+import AGR_D from '@@/shared/utils/orgs/AGR.md'
+import DETRAN_D from '@@/shared/utils/orgs/DETRAN.md'
+import ECONOMIA_D from '@@/shared/utils/orgs/ECONOMIA.md'
+import IPASGO_D from '@@/shared/utils/orgs/IPASGO.md'
+import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
+import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
+import SSP_D from '@@/shared/utils/orgs/SSP.md'
+
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
 const ENTITIES_DETRAN = 'DETRAN' as const
@@ -5,9 +13,10 @@ const ENTITIES_ECONOMIA = 'ECONOMIA' as const
 const ENTITIES_IPASGO = 'IPASGO' as const
 const ENTITIES_AGR = 'AGR' as const
 const ENTITIES_SSP = 'SSP' as const
-const ENTITIES_SEAD = 'sead' as const
+const ENTITIES_SEAD = 'SEAD' as const
+const ENTITIES_SEDUC = 'SEDUC' as const
 
-const ACTION_NONE = 'none' as const
+const ACTION_NONE = 'OUTROS' as const
 
 export const ENTITIES = {
   DETRAN: ENTITIES_DETRAN,
@@ -16,6 +25,7 @@ export const ENTITIES = {
   AGR: ENTITIES_AGR,
   SSP: ENTITIES_SSP,
   SEAD: ENTITIES_SEAD,
+  SEDUC: ENTITIES_SEDUC,
 } as const
 
 export const ACTIONS = {
@@ -24,50 +34,91 @@ export const ACTIONS = {
 
 export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Com base nos órgãos publicos expostos abaixo, retorne o respectivo órgão relacionado a solicitação do usuário. Não justifique a resposta em nenhum caso ou use caracteres como aspas, somente retorne a sigla do respectivo orgão.'
 
+export const ENTITIES_DESCRIPTION = {
+  [ENTITIES.DETRAN]: '',
+  [ENTITIES.ECONOMIA]: '',
+  [ENTITIES.IPASGO]: '',
+  [ENTITIES.AGR]: '',
+  [ENTITIES.SSP]: '',
+  [ENTITIES.SEAD]: '',
+  [ENTITIES.SEDUC]: '',
+} satisfies Record<EntitiesValues, string>
+
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
-  [ENTITIES.DETRAN]: [
-    'Ontem apareceu que tinha um boleto em meu CPF, do departamento de trânsito GO. Eu não fiz nenhuma compra, nenhuma transferência, nada... Então quero fazer um apelo perguntando o porquê da cobrança?',
-    'Recebi uma multa de trânsito em Goiânia, mas não estava na cidade na data da infração.  Como posso recorrer?',
-    'Meu veículo foi apreendido e quero saber como proceder para regularizar a situação e retirá-lo do pátio do DETRAN-GO.',
-    'Preciso agendar a vistoria do meu carro, qual o procedimento?',
-  ],
-  [ENTITIES.ECONOMIA]: [
-    'Minha empresa está com dificuldades em emitir notas fiscais eletrônicas em Goiânia.  O sistema da prefeitura está fora do ar?',
-    'Quero saber sobre os incentivos fiscais para novas empresas em Goiás.  Quais são os requisitos e como posso me inscrever?',
-    'O IPTU de 2024 em Goiânia está com um valor muito acima do esperado.  Houve algum erro no cálculo?  Como posso solicitar revisão?',
-    'Como faco para abrir uma inscrição estadual, preciso de orientação',
-  ],
-  [ENTITIES.IPASGO]: [
-    'Estou tentando marcar uma consulta com um especialista pelo IPASGO, mas não consigo vaga.  Há previsão de novos credenciamentos?',
-    'Meu plano do IPASGO cobre cirurgia bariátrica?  Quais são os critérios para aprovação do procedimento?',
-    'Não estou conseguindo autorizar um exame de alta complexidade pelo IPASGO.  O que devo fazer?',
-    'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
-  ],
-  [ENTITIES.AGR]: [
-    'Solicito fiscalização de desmatamento ilegal em área de preservação permanente na região de Goiânia.',
-    'Quero denunciar o uso irregular de agrotóxicos em uma propriedade rural próxima à minha residência em Goiás.',
-    'Preciso de informações sobre licenciamento ambiental para atividade de piscicultura em Goiás.',
-    'Gostaria de saber sobre os programas de apoio a agricultura familiar.',
-  ],
-  [ENTITIES.SSP]: [
-    'Fui vítima de um roubo em Goiânia e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
-    'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
-    'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
-    'Como posso obter informações sobre o andamento de um inquérito policial?',
-  ],
-  [ENTITIES.SEAD]: [
-    'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
-    'Quando sai o pagamento dos servidores estaduais?',
-    'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
-    'Onde encontro o edital do concurso da policia militar?',
-  ],
-} satisfies Record<EntitiesValues, string[]>
+  [ENTITIES.DETRAN]: {
+    description: DETRAN_D,
+    examples: [
+      'Ontem apareceu que tinha um boleto em meu CPF, do departamento de trânsito GO. Eu não fiz nenhuma compra, nenhuma transferência, nada... Então quero fazer um apelo perguntando o porquê da cobrança?',
+      'Recebi uma multa de trânsito em Goiânia, mas não estava na cidade na data da infração.  Como posso recorrer?',
+      'Meu veículo foi apreendido e quero saber como proceder para regularizar a situação e retirá-lo do pátio do DETRAN-GO.',
+      'Preciso agendar a vistoria do meu carro, qual o procedimento?',
+    ],
+  },
+  [ENTITIES.ECONOMIA]: {
+    description: ECONOMIA_D,
+    examples: [
+      'Minha empresa está com dificuldades em emitir notas fiscais eletrônicas em Goiânia.  O sistema da prefeitura está fora do ar?',
+      'Quero saber sobre os incentivos fiscais para novas empresas em Goiás.  Quais são os requisitos e como posso me inscrever?',
+      'O IPTU de 2024 em Goiânia está com um valor muito acima do esperado.  Houve algum erro no cálculo?  Como posso solicitar revisão?',
+      'Como faco para abrir uma inscrição estadual, preciso de orientação',
+    ],
+  },
+  [ENTITIES.IPASGO]: {
+    description: IPASGO_D,
+    examples: [
+      'Estou tentando marcar uma consulta com um especialista pelo IPASGO, mas não consigo vaga.  Há previsão de novos credenciamentos?',
+      'Meu plano do IPASGO cobre cirurgia bariátrica?  Quais são os critérios para aprovação do procedimento?',
+      'Não estou conseguindo autorizar um exame de alta complexidade pelo IPASGO.  O que devo fazer?',
+      'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
+    ],
+  },
+  [ENTITIES.AGR]: {
+    description: AGR_D,
+    examples: [
+      'Solicito fiscalização de desmatamento ilegal em área de preservação permanente na região de Goiânia.',
+      'Quero denunciar o uso irregular de agrotóxicos em uma propriedade rural próxima à minha residência em Goiás.',
+      'Preciso de informações sobre licenciamento ambiental para atividade de piscicultura em Goiás.',
+      'Gostaria de saber sobre os programas de apoio a agricultura familiar.',
+    ],
+  },
+  [ENTITIES.SSP]: {
+    description: SSP_D,
+    examples: [
+      'Fui vítima de um roubo em Goiânia e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
+      'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
+      'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
+      'Como posso obter informações sobre o andamento de um inquérito policial?',
+    ],
+  },
+  [ENTITIES.SEAD]: {
+    description: SEAD_D,
+    examples: [
+      'Eu gostaria de renovar meu documentos pessoais.',
+      'Eu gostaria de renovar os documentos do meu veículo',
+      'Eu queria reagendar um atendimento no Vapt Vupt',
+      'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
+      'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
+      'Quando sai o pagamento dos servidores estaduais?',
+      'Onde encontro o edital do concurso da policia militar?',
+    ],
+  },
+  [ENTITIES.SEDUC]: {
+    description: SEDUC_D,
+    examples: [
+      'Relato meu descontentamento com as ações da direção da Escola Estadual José Madalena em Maurilândia.',
+      'Como posso conseguir o cartão Bolsa de estudo?',
+      'Não estou conseguindo vaga no colégio estadual para o turno matutino.',
+      'Quando serão as matrículas escolares para o próximo ano?',
+    ],
+  },
+} satisfies Record<EntitiesValues, { examples: string[], description: string }>
 
 export const ACTIONS_CLASSIFICATION_EXAMPLES = {
-  [ACTIONS.NONE]: [
-    'Caso nenhum dos items acima seja válido',
-  ],
-} satisfies Record<ActionValues, string[]>
+  [ACTIONS.NONE]: {
+    description: 'Caso nenhum dos items acima seja válido, não se sinta na obrigação de responder.',
+    examples: [],
+  },
+} satisfies Record<ActionValues, { examples: string[], description: string }>
 
 export enum Vendors {
   google = 'google',

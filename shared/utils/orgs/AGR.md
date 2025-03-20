@@ -1,0 +1,1 @@
+Agência Goiana de Defesa Agropecuária. Responsável por fiscalização e defesa sanitária animal e vegetal, controle do uso de agrotóxicos, licenciamento ambiental de atividades agropecuárias e programas de apoio ao produtor rural.

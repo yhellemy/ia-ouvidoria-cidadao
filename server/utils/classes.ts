@@ -12,7 +12,7 @@ export interface IModel {
 }
 
 export interface ClassificationCategory {
-  [key: string]: string[]
+  [key: string]: { description: string, examples: string[] }
 }
 
 export class ClassificationAgent {
@@ -26,12 +26,18 @@ export class ClassificationAgent {
   private buildPrompt(input: string): IPrompt {
     const examples = Object.entries(this.categories)
       .map(([category, samples]) =>
-        `Category: ${category}\nExamples:\n${samples.join('\n')}`,
+        `######\n\nCategory: ${category}\nDescription:${samples.description}\nExamples:\n${samples.examples.join('\n')}\n\n######`,
       )
       .join('\n\n')
 
+    const options = Object.entries(this.categories)
+      .map(([category]) =>
+        category,
+      )
+      .join(', ')
+
     return {
-      systemInstruction: `${this.systemInstruction}\n\nAvailable Categories:\n${examples}`,
+      systemInstruction: `${this.systemInstruction}\n\nAvailable Categories:\n${examples}\n\nSelect between ${options}`,
       message: `Input to classify: "${input}"\nCategory:`,
       schema: this.schema,
     }
@@ -40,6 +46,8 @@ export class ClassificationAgent {
   async classify(input: string): Promise<string> {
     const prompt = this.buildPrompt(input)
     const result = await this.model.process(prompt)
+
+    console.log(`${prompt.systemInstruction}\n\n${prompt.message}\n\nResponse:${result}`)
 
     if (typeof result === 'string') {
       return this.schema.parse(result.trim())

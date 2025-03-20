@@ -1,0 +1,1 @@
+Secretaria da Economia do Estado de Goiás. Trata de assuntos relacionados a finanças públicas, tributos (IPVA, ICMS, IPTU em nível estadual), incentivos fiscais, arrecadação, e políticas econômicas do estado. Também cuida da emissão de notas fiscais e inscrição estadual.
