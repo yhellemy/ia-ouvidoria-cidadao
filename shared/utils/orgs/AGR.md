@@ -1,1 +1,2 @@
-Agência Goiana de Defesa Agropecuária. Responsável por fiscalização e defesa sanitária animal e vegetal, controle do uso de agrotóxicos, licenciamento ambiental de atividades agropecuárias e programas de apoio ao produtor rural.
+AGR é Agência Goiana de Regulação, Controle e Fiscalização de Serviços Públicos
+A agência é responsável por regular, controlar e fiscalizar o transporte rodoviário intermunicipal de passageiros, saneamento básico, recursos hídricos e minerais, contratos ou parcerias com organizações como OS`s e OSCIP`s, e outros serviços e bens desestatizados, que pertencem ao Estado, mas cuja administração é repassada a terceiros, como terminais rodoviários. Fiscaliza, ainda, os serviços de energia elétrica.

@@ -32,7 +32,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Com base nos órgãos publicos expostos abaixo, retorne o respectivo órgão relacionado a solicitação do usuário. Não justifique a resposta em nenhum caso ou use caracteres como aspas, somente retorne a sigla do respectivo orgão.'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Classifique o texto em um dos órgãos abaixo. Use a classificação OUTROS apenas se o texto não se relacionar claramente com nenhum dos órgãos listados ou se houver ambiguidade.Retorne apenas o nome do órgão correspondente, sem explicações'
 
 export const ENTITIES_DESCRIPTION = {
   [ENTITIES.DETRAN]: '',
@@ -48,18 +48,23 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
     description: DETRAN_D,
     examples: [
-      'Ontem apareceu que tinha um boleto em meu CPF, do departamento de trânsito GO. Eu não fiz nenhuma compra, nenhuma transferência, nada... Então quero fazer um apelo perguntando o porquê da cobrança?',
-      'Recebi uma multa de trânsito em Goiânia, mas não estava na cidade na data da infração.  Como posso recorrer?',
+      'Como posso parcelar o IPVA do ano corrente?',
+      'Ainda não paguei o IPVA, como posso pagar com parcelamento?',
+      'Não consigo acessar o sistema do Detran para consultar o valor do IPVA',
+      'Multa por excesso de velocidade.',
       'Meu veículo foi apreendido e quero saber como proceder para regularizar a situação e retirá-lo do pátio do DETRAN-GO.',
-      'Preciso agendar a vistoria do meu carro, qual o procedimento?',
+      'Preciso fazer uma vistoria do meu carro, qual o procedimento?',
+      'Não consigo emitir minha CNH após aprovação no exame.',
+      'O site do DETRAN não mostra o valor da multa.',
+      'Não estou conseguindo contestar multas',
     ],
   },
   [ENTITIES.ECONOMIA]: {
     description: ECONOMIA_D,
     examples: [
-      'Minha empresa está com dificuldades em emitir notas fiscais eletrônicas em Goiânia.  O sistema da prefeitura está fora do ar?',
+      'Já paguei a primeira parcela do IPVA, como posso pagar o restante da divida?',
       'Quero saber sobre os incentivos fiscais para novas empresas em Goiás.  Quais são os requisitos e como posso me inscrever?',
-      'O IPTU de 2024 em Goiânia está com um valor muito acima do esperado.  Houve algum erro no cálculo?  Como posso solicitar revisão?',
+      'Como posso pagar o IPVA dos anos anteriores?',
       'Como faco para abrir uma inscrição estadual, preciso de orientação',
     ],
   },
@@ -77,29 +82,37 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
     examples: [
       'Solicito fiscalização de desmatamento ilegal em área de preservação permanente na região de Goiânia.',
       'Quero denunciar o uso irregular de agrotóxicos em uma propriedade rural próxima à minha residência em Goiás.',
-      'Preciso de informações sobre licenciamento ambiental para atividade de piscicultura em Goiás.',
-      'Gostaria de saber sobre os programas de apoio a agricultura familiar.',
+      'A empresa de onibus de viagem intermunicipal de passageiro não está respeitando o acesso do idoso',
+      'A minha região está com falta de saneamento, já informei a empresa responsavel e eles não me responderam.',
+      'A minha região está sem água desde a semana passada, estou tentando contato com a Saneago e ainda não resolveram a situação.',
     ],
   },
   [ENTITIES.SSP]: {
     description: SSP_D,
     examples: [
-      'Fui vítima de um roubo em Goiânia e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
+      'Fui vítima de um roubo e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
       'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
+      'Empresa cobrou R$ 2.000 por taxas extras não autorizadas.',
       'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
       'Como posso obter informações sobre o andamento de um inquérito policial?',
+      'Perdi meus documentos o que devo fazer?',
+      'Como denunciar uma autoescola ?',
+      'Preciso registrar um BO por roubo de celular.',
+      'Consultar antecedentes criminais para concurso público.',
     ],
   },
   [ENTITIES.SEAD]: {
     description: SEAD_D,
     examples: [
       'Eu gostaria de renovar meu documentos pessoais.',
-      'Eu gostaria de renovar os documentos do meu veículo',
+      'Como agendar a CNH pelo site VAPT VUPT?',
+      'Estou bloqueado para agendar um atendimento',
       'Eu queria reagendar um atendimento no Vapt Vupt',
       'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
       'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
       'Quando sai o pagamento dos servidores estaduais?',
-      'Onde encontro o edital do concurso da policia militar?',
+      'Consulta ao extrato do Aluguel Social 2024.',
+      'Edital de concurso para servidor estadual de Goiás',
     ],
   },
   [ENTITIES.SEDUC]: {
