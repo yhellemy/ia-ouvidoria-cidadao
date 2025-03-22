@@ -34,16 +34,6 @@ export const ACTIONS = {
 
 export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Classifique o texto em um dos órgãos abaixo. Use a classificação OUTROS apenas se o texto não se relacionar claramente com nenhum dos órgãos listados ou se houver ambiguidade.Retorne apenas o nome do órgão correspondente, sem explicações'
 
-export const ENTITIES_DESCRIPTION = {
-  [ENTITIES.DETRAN]: '',
-  [ENTITIES.ECONOMIA]: '',
-  [ENTITIES.IPASGO]: '',
-  [ENTITIES.AGR]: '',
-  [ENTITIES.SSP]: '',
-  [ENTITIES.SEAD]: '',
-  [ENTITIES.SEDUC]: '',
-} satisfies Record<EntitiesValues, string>
-
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
     description: DETRAN_D,
@@ -214,6 +204,12 @@ export const OLLAMA_MODELS = {
     name: 'deepseek-r1:8b',
   },
 } as const
+
+export const MODEL_DEFAULTS = {
+  [Vendors.google]: GOOGLE_MODELS,
+  [Vendors.gov]: GOV_MODELS,
+  [Vendors.ollama]: OLLAMA_MODELS,
+} as const satisfies Record<Vendors, unknown>
 
 export const GOOGLE_SAFETY_SETTINGS = [
   {
