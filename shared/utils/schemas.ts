@@ -7,7 +7,7 @@ export type EntitiesValues = typeof ENTITIES[EntitiesKeys]
 export type ActionKeys = keyof typeof ACTIONS
 export type ActionValues = typeof ACTIONS[ActionKeys]
 
-export type MessageSchema = z.infer<typeof messageSchema>
+export type ModelDataSchema = z.infer<typeof modelDataSchema>
 export type EntitySchema = z.infer<typeof entitySchema>
 
 export type DiscriminatedModelSchema = z.infer<typeof discriminatedModelSchema>
@@ -23,8 +23,10 @@ export const actionSchema = z.enum(
 
 export const allOptions = z.union([entitySchema, actionSchema])
 
-export const messageSchema = z.object({
+export const modelDataSchema = z.object({
   message: z.string(),
+  fails: z.number().optional(),
+  failsRange: z.number().optional(),
 })
 
 export const agentResponseSchema = allOptions
@@ -50,4 +52,4 @@ export const discriminatedModelSchema = z.discriminatedUnion('vendor', [
   ollamaBody,
 ])
 
-export const inferBodySchema = z.union([messageSchema, discriminatedModelSchema.and(messageSchema)])
+export const inferBodySchema = z.union([modelDataSchema, discriminatedModelSchema.and(modelDataSchema)])

@@ -28,6 +28,7 @@ defineRouteMeta({
 
 export default defineEventHandler(async (event) => {
   const result = await readValidatedBody(event, body => inferBodySchema.safeParse(body))
+  const macros = useModelMacros()
 
   if (!result.success)
     throw result.error.issues
@@ -52,6 +53,10 @@ export default defineEventHandler(async (event) => {
     model = new OllamaModel()
   }
 
+  const temperature = result.data.fails
+    ? macros.failsToTemperature(result.data.fails, result.data.failsRange)
+    : undefined
+
   const agent = new ClassificationAgent(
     model,
     ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS,
@@ -60,7 +65,13 @@ export default defineEventHandler(async (event) => {
       ...ACTIONS_CLASSIFICATION_EXAMPLES,
     },
     allOptions,
+    temperature,
   )
 
-  return await agent.classify(result.data.message)
+  const classifiedResponse = await agent.classify(result.data.message)
+  const status = CLASSIFY_RESPONSE[classifiedResponse.status]
+
+  setResponseStatus(event, status.code, status.message)
+
+  return classifiedResponse.result
 })

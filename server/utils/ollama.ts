@@ -7,12 +7,17 @@ export class OllamaModel implements IModel {
     const config = useRuntimeConfig()
 
     const ollama = new Ollama({ host: config.OLLAMA_BASE_URL })
+
     const apiResponse = await ollama.chat({
       model: OLLAMA_MODELS[this.ollamaModelName].name,
       messages: [
         { role: 'system', content: prompt.systemInstruction },
         { role: 'user', content: prompt.message },
       ],
+      options: {
+        temperature: prompt.temperature,
+      },
+
       // hide format on chain of thoughts models
       /*       ...![OllamaModelEnum.deepseek_r1_8b].includes(this.ollamaModelName)
         ? {

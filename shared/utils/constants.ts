@@ -155,6 +155,32 @@ export enum OllamaModelEnum {
   deepseek_r1_8b = 'deepseek-r1:8b',
 }
 
+export enum AIResponseStatus {
+  Success = 1,
+  PoorlyFormatted = 2,
+  Fished = 3,
+  Failed = 4,
+}
+
+export const CLASSIFY_RESPONSE = {
+  [AIResponseStatus.Success]: {
+    code: 200,
+    message: 'Resposta obtida com sucesso',
+  },
+  [AIResponseStatus.PoorlyFormatted]: {
+    code: 202,
+    message: 'Resposta mal formatada',
+  },
+  [AIResponseStatus.Fished]: {
+    code: 203,
+    message: 'Resposta obtida com sucesso parcial',
+  },
+  [AIResponseStatus.Failed]: {
+    code: 500,
+    message: 'A requisição falhou',
+  },
+} satisfies Record<AIResponseStatus, { code: number, message: string }>
+
 export const GOOGLE_MODELS = {
   [GoogleModelEnum.thinking]: {
     name: 'gemini-2.0-flash-thinking-exp-1219',
