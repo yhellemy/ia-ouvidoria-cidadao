@@ -5,6 +5,7 @@ import IPASGO_D from '@@/shared/utils/orgs/IPASGO.md'
 import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
 import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
 import SSP_D from '@@/shared/utils/orgs/SSP.md'
+import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
 
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
@@ -15,6 +16,7 @@ const ENTITIES_AGR = 'AGR' as const
 const ENTITIES_SSP = 'SSP' as const
 const ENTITIES_SEAD = 'SEAD' as const
 const ENTITIES_SEDUC = 'SEDUC' as const
+const ENTITIES_SANEAGO = 'SANEAGO' as const
 
 const ACTION_NONE = 'OUTROS' as const
 
@@ -26,6 +28,7 @@ export const ENTITIES = {
   SSP: ENTITIES_SSP,
   SEAD: ENTITIES_SEAD,
   SEDUC: ENTITIES_SEDUC,
+  SANEAGO: ENTITIES_SANEAGO,
 } as const
 
 export const ACTIONS = {
@@ -65,6 +68,17 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Meu plano do IPASGO cobre cirurgia bariátrica?  Quais são os critérios para aprovação do procedimento?',
       'Não estou conseguindo autorizar um exame de alta complexidade pelo IPASGO.  O que devo fazer?',
       'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
+    ],
+  },
+  [ENTITIES.SANEAGO]: {
+    description: IPASGO_D,
+    examples: [
+      'Existe um atraso no serviço solicitado sobre Ligação de Esgoto',
+      'Preciso de religação de água',
+      'Demora em uma simples ligação de água',
+      'O esgoto da minha rua está com muito mau cheiro',
+      'A equipe que veio ligar minha água não finalizou o serviço',
+      'A minha conta de água veio com valores ou custos indevidos',
     ],
   },
   [ENTITIES.AGR]: {

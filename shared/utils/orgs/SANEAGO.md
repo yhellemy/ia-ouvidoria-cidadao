@@ -1,0 +1,1 @@
+Identifique  à SANEAGO ou seus serviços de saneamento básico em Goiás. O texto deve mencionar sobre saneamento, como abastecimento de água, tratamento de esgoto, ou gestão de resíduos. Se for um texto que menciona  que entrou em contato com a saneago e não teve o problema solucionado então a classificação deve ser para a AGR.
