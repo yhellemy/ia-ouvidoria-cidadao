@@ -157,7 +157,15 @@ export enum GovModelEnum {
 export enum OllamaModelEnum {
   gemma3 = 'gemma3',
   deepseek_r1_8b = 'deepseek-r1:8b',
-  llama3_1_8b = 'llama3-1:8b',
+  llama3_1_8b = 'llama3.1:8b',
+  llama3_2_3b = 'llama3.2:3b',
+  gemma3_12 = 'gemma3:12b ',
+  deepseek_r1_7b = 'deepseek-r1:7b-qwen-distill-fp16',
+  deepseek_r1_1_5b = 'deepseek-r1:1.5b-qwen-distill-fp16',
+  qwen2_5 = 'qwen2.5:7b-instruct-fp16',
+  qwen2 = 'qwen2:7b-instruct-fp16',
+  nomic = 'nomic-embed-text: latest',
+  llama_guard3 = 'llama-guard3:8b-fp16',
 }
 
 export enum AIResponseStatus {
@@ -221,7 +229,31 @@ export const OLLAMA_MODELS = {
   [OllamaModelEnum.llama3_1_8b]: {
     name: 'llama3.1:8b',
   },
-} as const
+  [OllamaModelEnum.llama3_2_3b]: {
+    name: 'llama3.2:3b',
+  },
+  [OllamaModelEnum.gemma3_12]: {
+    name: 'gemma3:12b ',
+  },
+  [OllamaModelEnum.deepseek_r1_7b]: {
+    name: 'deepseek-r1:7b-qwen-distill-fp16',
+  },
+  [OllamaModelEnum.deepseek_r1_1_5b]: {
+    name: 'deepseek-r1:1.5b-qwen-distill-fp16',
+  },
+  [OllamaModelEnum.qwen2_5]: {
+    name: 'qwen2.5:7b-instruct-fp16',
+  },
+  [OllamaModelEnum.qwen2]: {
+    name: 'qwen2:7b-instruct-fp16',
+  },
+  [OllamaModelEnum.nomic]: {
+    name: 'nomic-embed-text: latest',
+  },
+  [OllamaModelEnum.llama_guard3]: {
+    name: 'llama-guard3:8b-fp16',
+  },
+} as const satisfies Record<OllamaModelEnum, { name: string }>
 
 export const MODEL_DEFAULTS = {
   [Vendors.google]: GOOGLE_MODELS,
