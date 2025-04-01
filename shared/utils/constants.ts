@@ -2,10 +2,10 @@ import AGR_D from '@@/shared/utils/orgs/AGR.md'
 import DETRAN_D from '@@/shared/utils/orgs/DETRAN.md'
 import ECONOMIA_D from '@@/shared/utils/orgs/ECONOMIA.md'
 import IPASGO_D from '@@/shared/utils/orgs/IPASGO.md'
+// import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
 import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
 import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
 import SSP_D from '@@/shared/utils/orgs/SSP.md'
-import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
 
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
@@ -16,7 +16,7 @@ const ENTITIES_AGR = 'AGR' as const
 const ENTITIES_SSP = 'SSP' as const
 const ENTITIES_SEAD = 'SEAD' as const
 const ENTITIES_SEDUC = 'SEDUC' as const
-const ENTITIES_SANEAGO = 'SANEAGO' as const
+// const ENTITIES_SANEAGO = 'SANEAGO' as const
 
 const ACTION_NONE = 'OUTROS' as const
 
@@ -28,7 +28,7 @@ export const ENTITIES = {
   SSP: ENTITIES_SSP,
   SEAD: ENTITIES_SEAD,
   SEDUC: ENTITIES_SEDUC,
-  SANEAGO: ENTITIES_SANEAGO,
+  // SANEAGO: ENTITIES_SANEAGO,
 } as const
 
 export const ACTIONS = {
@@ -70,17 +70,17 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
     ],
   },
-  [ENTITIES.SANEAGO]: {
-    description: SANEAGO_D,
-    examples: [
-      'Existe um atraso no serviço solicitado sobre Ligação de Esgoto',
-      'Preciso de religação de água',
-      'Demora em uma simples ligação de água',
-      'O esgoto da minha rua está com muito mau cheiro',
-      'A equipe que veio ligar minha água não finalizou o serviço',
-      'A minha conta de água veio com valores ou custos indevidos',
-    ],
-  },
+  // [ENTITIES.SANEAGO]: {
+  //   description: SANEAGO_D,
+  //   examples: [
+  //     'Existe um atraso no serviço solicitado sobre Ligação de Esgoto',
+  //     'Preciso de religação de água',
+  //     'Demora em uma simples ligação de água',
+  //     'O esgoto da minha rua está com muito mau cheiro',
+  //     'A equipe que veio ligar minha água não finalizou o serviço',
+  //     'A minha conta de água veio com valores ou custos indevidos',
+  //   ],
+  // },
   [ENTITIES.AGR]: {
     description: AGR_D,
     examples: [
