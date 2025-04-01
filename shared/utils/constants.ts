@@ -71,7 +71,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
     ],
   },
   [ENTITIES.SANEAGO]: {
-    description: IPASGO_D,
+    description: SANEAGO_D,
     examples: [
       'Existe um atraso no serviço solicitado sobre Ligação de Esgoto',
       'Preciso de religação de água',
@@ -157,6 +157,7 @@ export enum GovModelEnum {
 export enum OllamaModelEnum {
   gemma3 = 'gemma3',
   deepseek_r1_8b = 'deepseek-r1:8b',
+  llama3_1_8b = 'llama3-1:8b',
 }
 
 export enum AIResponseStatus {
@@ -216,6 +217,9 @@ export const OLLAMA_MODELS = {
   },
   [OllamaModelEnum.deepseek_r1_8b]: {
     name: 'deepseek-r1:8b',
+  },
+  [OllamaModelEnum.llama3_1_8b]: {
+    name: 'llama3-1:8b',
   },
 } as const
 
