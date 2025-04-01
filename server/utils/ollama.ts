@@ -2,7 +2,11 @@ import { Ollama } from 'ollama'
 // import { zodToJsonSchema } from 'zod-to-json-schema'
 
 export class OllamaModel implements IModel {
-  constructor(public ollamaModelName: OllamaModelEnum = OllamaModelEnum.gemma3) {}
+  constructor(public ollamaModelName: OllamaModelEnum = OllamaModelEnum.gemma3) {
+    // eslint-disable-next-line no-console
+    console.log('running Ollama ', ollamaModelName)
+  }
+
   async process(prompt: IPrompt): Promise<string> {
     const config = useRuntimeConfig()
 
