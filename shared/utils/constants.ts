@@ -219,7 +219,7 @@ export const OLLAMA_MODELS = {
     name: 'deepseek-r1:8b',
   },
   [OllamaModelEnum.llama3_1_8b]: {
-    name: 'llama3-1:8b',
+    name: 'llama3.1:8b',
   },
 } as const
 
