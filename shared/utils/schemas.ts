@@ -52,4 +52,4 @@ export const discriminatedModelSchema = z.discriminatedUnion('vendor', [
   ollamaBody,
 ])
 
-export const inferBodySchema = z.union([modelDataSchema, discriminatedModelSchema.and(modelDataSchema)])
+export const inferBodySchema = discriminatedModelSchema.and(modelDataSchema).or(modelDataSchema)
