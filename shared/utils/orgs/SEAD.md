@@ -1,5 +1,1 @@
-Classifique o texto abaixo como SEAD apenas se mencionar:
-
-Agendamentos iniciais de serviços como CNH, RG, Passaporte ou Carteira de Identidade Nacional (CIN) via sistema VAPT VUPT.
-Problemas técnicos no agendamento desses serviços.
-Processos de gestão administrativa do Estado de Goiás: concursos públicos, capacitação de servidores, cadastro de procurações, gestão de patrimônio ou compras governamentais.
+A Secretaria de Estado da Administração (SEAD) é o órgão do governo responsável pelo atendimento ao cidadão. Então, Agendamentos iniciais de serviços como CNH, RG, Passaporte ou Carteira de Identidade Nacional (CIN) via sistema VAPT VUPT são serviços de sua responsabilidade. A SEAD também é responsável se houver problemas técnicos no agendamento desses serviços. Como a SEAD desenvolve e executa atividades relativas à administração pública suas atividades também abrange processos de gestão administrativa do Estado de Goiás: concursos públicos, capacitação de servidores, cadastro de procurações, gestão de patrimônio ou compras governamentais.
