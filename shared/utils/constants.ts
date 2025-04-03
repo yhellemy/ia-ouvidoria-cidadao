@@ -111,7 +111,12 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Eu gostaria de renovar meu documentos pessoais.',
       'Como agendar a CNH pelo site VAPT VUPT?',
       'Estou bloqueado para agendar um atendimento',
+      'Eu queria reagendar um atendimento no Vapt Vupt',
+      'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
       'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
+      'Quando sai o pagamento dos servidores estaduais?',
+      'Consulta ao extrato do Aluguel Social 2024.',
+      'Edital de concurso para servidor estadual de Goiás',
     ],
   },
   [ENTITIES.SEDUC]: {
