@@ -35,7 +35,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Classifique o texto em um dos órgãos abaixo. Use a classificação OUTROS apenas se o texto não se relacionar claramente com nenhum dos órgãos listados ou se houver ambiguidade.Retorne apenas o nome do órgão correspondente, sem explicações'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Analise a manifestação do cidadão e classifique-a, identificando o órgão abaixo mais adequado para tratá-la. Caso não seja possível identificar um órgão específico ou se houver ambiguidade, classifique como OUTROS. Responda apenas com o nome do órgão mais adequado, sem qualquer explicação ou justificativa.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
