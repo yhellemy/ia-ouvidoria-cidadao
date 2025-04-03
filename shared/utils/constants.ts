@@ -35,7 +35,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um funcionário do departamento de ouvidoria do Estado. A tua responsabilidade é ler os textos da manifestações e definir qual órgão do estado devem receber essas manifestações. Então, leia a manifestação do cidadão buscando identificar qual o órgão abaixo é o correto para recebe-lá. Caso não seja possível identificar um órgão específico ou se houver ambiguidade, classifique como OUTROS. Responda apenas com o nome do órgão que você tem a certeza que é o adequado para tratar o assunto, sem qualquer explicação ou justificativa.'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um funcionário do departamento de ouvidoria do Estado. A tua responsabilidade é ler os textos da manifestações e definir qual órgão do estado devem receber essas manifestações. Então, leia a manifestação do cidadão buscando identificar qual dentre esses órgãos (AGR, DETRAN, ECONOMIA, IPASGO, SEAD, SEDUC ou SSP) é o correto para recebe-lá. Caso não seja possível identificar o órgão específico ou se houver ambiguidade, classifique como OUTROS. Responda apenas o órgão, sem qualquer explicação ou justificativa.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
