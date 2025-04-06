@@ -166,6 +166,7 @@ export enum OllamaModelEnum {
   qwen2 = 'qwen2:7b-instruct-fp16',
   nomic = 'nomic-embed-text: latest',
   llama_guard3 = 'llama-guard3:8b-fp16',
+  deepseek_r1_14b = 'deepseek-r1:14b',
 }
 
 export enum AIResponseStatus {
@@ -252,6 +253,9 @@ export const OLLAMA_MODELS = {
   },
   [OllamaModelEnum.llama_guard3]: {
     name: 'llama-guard3:8b-fp16',
+  },
+  [OllamaModelEnum.deepseek_r1_14b]: {
+    name: 'deepseek-r1:14b',
   },
 } as const satisfies Record<OllamaModelEnum, { name: string }>
 

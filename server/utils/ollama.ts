@@ -32,7 +32,7 @@ export class OllamaModel implements IModel {
 
     let agentOutput = apiResponse.message.content
 
-    if (this.ollamaModelName === OllamaModelEnum.deepseek_r1_8b) {
+    if (this.ollamaModelName === OllamaModelEnum.deepseek_r1_8b || this.ollamaModelName === OllamaModelEnum.deepseek_r1_14b) {
       // Hide the chain of thoughts
       agentOutput = agentOutput.replace(/<think>(?:(?!<\/think>).)*<\/think>\s*/gs, '')
       agentOutput = decodeURIComponent(agentOutput)
