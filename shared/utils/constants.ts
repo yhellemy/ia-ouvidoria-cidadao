@@ -2,10 +2,12 @@ import AGR_D from '@@/shared/utils/orgs/AGR.md'
 import DETRAN_D from '@@/shared/utils/orgs/DETRAN.md'
 import ECONOMIA_D from '@@/shared/utils/orgs/ECONOMIA.md'
 import IPASGO_D from '@@/shared/utils/orgs/IPASGO.md'
-// import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
+import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
 import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
 import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
 import SSP_D from '@@/shared/utils/orgs/SSP.md'
+import SES_D from '@@/shared/utils/orgs/SES.md'
+
 
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
@@ -16,7 +18,9 @@ const ENTITIES_AGR = 'AGR' as const
 const ENTITIES_SSP = 'SSP' as const
 const ENTITIES_SEAD = 'SEAD' as const
 const ENTITIES_SEDUC = 'SEDUC' as const
-// const ENTITIES_SANEAGO = 'SANEAGO' as const
+const ENTITIES_SANEAGO = 'SANEAGO' as const
+const ENTITIES_SES = 'SES' as const
+
 
 const ACTION_NONE = 'OUTROS' as const
 
@@ -28,14 +32,15 @@ export const ENTITIES = {
   SSP: ENTITIES_SSP,
   SEAD: ENTITIES_SEAD,
   SEDUC: ENTITIES_SEDUC,
-  // SANEAGO: ENTITIES_SANEAGO,
+ SANEAGO: ENTITIES_SANEAGO,
+ SES: ENTITIES_SES,
 } as const
 
 export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público do departamento de ouvidoria do Estado de Goiás. A tua responsabilidade é ler a mensagem e CLASSIFICAR para qual destes órgãos (AGR, DETRAN, ECONOMIA, IPASGO, SEAD, SEDUC ou SSP)  a mensagem deverá ser encaminhada. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS. Na sua RESPOSTA retorne APENAS o órgão que você classificou, logo não defina a categoria ou tenha explicações e justificativas.'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um assistente inteligente que analisa mensagens de cidadãos e classifica cada uma conforme o órgão do Governo do Estado de Goiás responsável por tratar do assunto. Abaixo estão os critérios para encaminhamento. Com base no texto fornecido, **retorne apenas o nome do órgão responsável**. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
@@ -70,17 +75,16 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
     ],
   },
-  // [ENTITIES.SANEAGO]: {
-  //   description: SANEAGO_D,
-  //   examples: [
-  //     'Existe um atraso no serviço solicitado sobre Ligação de Esgoto',
-  //     'Preciso de religação de água',
-  //     'Demora em uma simples ligação de água',
-  //     'O esgoto da minha rua está com muito mau cheiro',
-  //     'A equipe que veio ligar minha água não finalizou o serviço',
-  //     'A minha conta de água veio com valores ou custos indevidos',
-  //   ],
-  // },
+  [ENTITIES.SANEAGO]: {
+    description: SANEAGO_D,
+    examples: [
+      'Solicito a Ligação de Esgoto',
+      'Preciso de religação de água',
+      'Gostaria de solicitar a ligação de água',
+      'O esgoto da minha rua está com muito mau cheiro',
+      'A minha conta de água veio com valores ou custos indevidos',
+    ],
+  },
   [ENTITIES.AGR]: {
     description: AGR_D,
     examples: [
@@ -105,6 +109,20 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Consultar antecedentes criminais para concurso público.',
     ],
   },
+  [ENTITIES.SES]: {
+    description: SES_D,
+    examples: [
+      'Fui vítima de um roubo e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
+      'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
+      'Empresa cobrou R$ 2.000 por taxas extras não autorizadas.',
+      'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
+      'Como posso obter informações sobre o andamento de um inquérito policial?',
+      'Perdi meus documentos o que devo fazer?',
+      'Como denunciar uma autoescola ?',
+      'Preciso registrar um BO por roubo de celular.',
+      'Consultar antecedentes criminais para concurso público.',
+    ],
+  },
   [ENTITIES.SEAD]: {
     description: SEAD_D,
     examples: [
@@ -115,7 +133,6 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
       'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
       'Quando sai o pagamento dos servidores estaduais?',
-      'Consulta ao extrato do Aluguel Social 2024.',
       'Denúncia contra conduta ou comportamento de um servidor público',
     ],
   },
@@ -132,7 +149,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
 
 export const ACTIONS_CLASSIFICATION_EXAMPLES = {
   [ACTIONS.NONE]: {
-    description: 'Caso nenhum dos items acima seja válido, não se sinta na obrigação de responder.',
+    description: 'Retorne apenas o **nome do órgão** mais adequado (ex: "SES", "SANEAGO", "ECONOMIA"). Se o texto não corresponder a nenhum dos casos acima, retorne: "OUTROS"',
     examples: [],
   },
 } satisfies Record<ActionValues, { examples: string[], description: string }>
