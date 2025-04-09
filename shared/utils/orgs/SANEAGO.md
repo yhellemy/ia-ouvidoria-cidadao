@@ -1,6 +1,3 @@
-SANEAGO – Saneamento de Goiás S.A.
-Encaminhar quando o texto tratar de:
-- Falta de água, vazamentos, esgoto;
-- Qualidade da água;
-- Cobranças indevidas em contas de água;
-- Atendimento da SANEAGO.
+A Saneamento de Goiás S.A (SANEAGO) é responsável por prestar serviços de Saneamento Básico, por concessão e gestão associada em 223 dos 246 municípios de Goiás. Cabe à Companhia efetuar estudos, elaborar projetos, realizar obras, operar e praticar a exploração de serviços de Saneamento Básico. A SANEAGO fornece serviços de abastecimento de água e coleta e/ou tratamento de esgoto para um grande número de consumidores residenciais, comerciais, industriais e públicos. Além da atuação na operação de água tratada e de esgotamento sanitário, serviços já realizados pela Saneago, a legislação em tela também permite que a Companhia atue na limpeza urbana, no manejo de resíduos sólidos e na drenagem e no manejo de águas pluviais urbanas.
+É responsabilidade da SANEAGO temas sobre os serviços de: Falta de água, vazamentos, esgoto, qualidade da água cobranças indevidas em contas de água, atendimento da SANEAGO.
+Caso a SANEAGO não tenha resolvido o problema do cidadão então a responsabilidade é da AGR fiscalizar.
