@@ -38,7 +38,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um assistente inteligente que analisa mensagens de cidadãos e classifica cada uma conforme o órgão do Governo do Estado de Goiás responsável por tratar do assunto. Abaixo estão os critérios para encaminhamento. Com base no texto fornecido, **retorne apenas o nome do órgão responsável**. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS.'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público que analisa mensagens de cidadãos e faz as classificações de cada uma para encaminha-las para o órgão do Governo do Estado responsável por tratar do assunto. Abaixo estão os critérios para encaminhamento. Com base no texto fornecido, **retorne apenas o nome do órgão responsável**. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {

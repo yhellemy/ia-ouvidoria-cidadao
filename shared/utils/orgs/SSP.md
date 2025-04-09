@@ -1,4 +1,4 @@
-SSP SSP – Secretaria de Segurança Pública:
+SSP Secretaria de Segurança Pública:
 Encaminhar quando o texto tratar de:
 -Atuação da Polícia Militar, Polícia Civil, Corpo de Bombeiros ou Polícia Técnico-Científica do Estado;
 -Segurança pública, assaltos, furtos, violência, tráfico ou denúncias de crimes;
