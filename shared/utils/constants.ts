@@ -73,16 +73,6 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço o reembolso de uma consulta que tive que pagar particular, porque o médico não atendia mais pelo Ipasgo?',
     ],
   },
-  [ENTITIES.SANEAGO]: {
-    description: SANEAGO_D,
-    examples: [
-      'Solicito a Ligação de Esgoto',
-      'Preciso de religação de água',
-      'Gostaria de solicitar a ligação de água',
-      'O esgoto da minha rua está com muito mau cheiro',
-      'A minha conta de água veio com valores ou custos indevidos',
-    ],
-  },
   [ENTITIES.AGR]: {
     description: AGR_D,
     examples: [
@@ -91,6 +81,16 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'A empresa de onibus de viagem intermunicipal de passageiro não está respeitando o acesso do idoso',
       'A minha região está com falta de saneamento, já informei a empresa responsavel e eles não me responderam.',
       'A minha região está sem água desde a semana passada, estou tentando contato com a Saneago e ainda não resolveram a situação.',
+    ],
+  },
+  [ENTITIES.SANEAGO]: {
+    description: SANEAGO_D,
+    examples: [
+      'Solicito a Ligação de Esgoto',
+      'Preciso de religação de água',
+      'Gostaria de solicitar a ligação de água',
+      'O esgoto da minha rua está com muito mau cheiro',
+      'A minha conta de água veio com valores ou custos indevidos',
     ],
   },
   [ENTITIES.SSP]: {

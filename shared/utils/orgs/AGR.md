@@ -1,7 +1,2 @@
-AGR – Agência Goiana de Regulação, Controle e Fiscalização de Serviços Públicos:
-Encaminhar para a AGR quando o texto indicar problemas com:
-- Transporte rodoviário intermunicipal de passageiros;
-- Saneamento básico, recursos hídricos ou minerais (em contexto de regulação);
-- Serviços prestados por empresas terceirizadas ou concessionárias do Estado (como OSs, OSCIPs, terminais rodoviários, etc.);
-- Energia elétrica;
-- Qualquer serviço público estadual descentralizado com falha na prestação por empresas contratadas.
+AGR é Agência Goiana de Regulação, Controle e Fiscalização de Serviços Públicos
+A agência é responsável por regular, controlar e fiscalizar o transporte rodoviário intermunicipal de passageiros, saneamento básico, recursos hídricos e minerais, contratos ou parcerias com organizações como OS`s e OSCIP`s, e outros serviços e bens desestatizados, que pertencem ao Estado, mas cuja administração é repassada a terceiros, como terminais rodoviários. Fiscaliza, ainda, os serviços de energia elétrica.
