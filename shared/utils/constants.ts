@@ -146,7 +146,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
 
 export const ACTIONS_CLASSIFICATION_EXAMPLES = {
   [ACTIONS.NONE]: {
-    description: 'Retorne apenas o **nome do órgão** mais adequado. Se o texto não corresponder a nenhum dos casos acima ou caso você não saiba o órgão correto retorne "OUTROS"',
+    description: 'Retorne apenas o nome do órgão mais adequado. Se o texto não corresponder a nenhum dos casos acima ou caso você não saiba o órgão correto retorne "OUTROS"',
     examples: [],
   },
 } satisfies Record<ActionValues, { examples: string[], description: string }>

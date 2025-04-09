@@ -1,6 +1,1 @@
-SES – Secretaria de Estado da Saúde:
-Encaminhar quando o texto tratar de:
-- Hospitais e unidades de saúde estaduais;
-- Falta de médicos, exames, medicamentos na rede pública estadual;
-- Regulação de leitos e serviços do SUS estadual;
-- Vacinação e campanhas de saúde pública.
+A Secretaria de Estado da Saúde (SES) é responsável por formular e a executar da política estadual de saúde pública.É de responsabilidade da SES assuntos sobre: produção de alimentos, drogas e medicamentos; a gestão, a coordenação e a fiscalização do Sistema Único de Saúde no Estado; a administração dos sistemas de vigilância epidemiológica, sanitária, ambiental em saúde, de saúde do trabalhador e da rede estadual de laboratórios de saúde pública; a promoção da pesquisa científica e da educação profissional e tecnológica, visando à formação, à capacitação e à qualificação para o serviço público na área da saúde; Hospitais e unidades de saúde estaduais; Falta de médicos, exames, medicamentos na rede pública estadual; Regulação de leitos e serviços do SUS estadual; Vacinação e campanhas de saúde pública.
