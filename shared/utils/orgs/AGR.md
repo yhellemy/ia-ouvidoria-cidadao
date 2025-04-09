@@ -1,2 +1,3 @@
 AGR é Agência Goiana de Regulação, Controle e Fiscalização de Serviços Públicos
 A agência é responsável por regular, controlar e fiscalizar o transporte rodoviário intermunicipal de passageiros, saneamento básico, recursos hídricos e minerais, contratos ou parcerias com organizações como OS`s e OSCIP`s, e outros serviços e bens desestatizados, que pertencem ao Estado, mas cuja administração é repassada a terceiros, como terminais rodoviários. Fiscaliza, ainda, os serviços de energia elétrica.
+É de responsabilidade da AGR Manifestações em desfavor a SANEAGO, Organizações Sociais (OS) e as Organizações da Sociedade Civil de Interesse Público.
