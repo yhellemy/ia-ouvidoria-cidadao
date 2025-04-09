@@ -38,7 +38,7 @@ export const ACTIONS = {
   NONE: ACTION_NONE,
 } as const
 
-export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público que analisa mensagens de cidadãos e faz as classificações de cada uma para encaminha-las para o órgão do Governo do Estado responsável por tratar do assunto. Abaixo estão os critérios para encaminhamento. Com base no texto fornecido, **retorne apenas o nome do órgão responsável**. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS.'
+export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público do departamento de ouvidoria do Estado de Goiás. A tua responsabilidade é ler a mensagem e CLASSIFICAR para qual destes órgãos (AGR, DETRAN, ECONOMIA, IPASGO, SANEAGO, SEAD, SEDUC, SES ou SSP)  a mensagem deverá ser encaminhada. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS. Na sua RESPOSTA retorne APENAS o órgão que você classificou, logo não defina a categoria ou tenha explicações e justificativas.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
@@ -129,7 +129,8 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
       'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
       'Quando sai o pagamento dos servidores estaduais?',
-      'Denúncia contra conduta ou comportamento de um servidor público',
+      'Consulta ao extrato do Aluguel Social 2024.',
+      'Edital de concurso para servidor estadual de Goiás',
     ],
   },
   [ENTITIES.SEDUC]: {
