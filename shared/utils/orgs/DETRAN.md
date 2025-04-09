@@ -1,9 +1,1 @@
-DETRAN – Departamento Estadual de Trânsito de Goiás:
-Encaminhar quando o texto tratar de:
-- Carteira Nacional de Habilitação (CNH): emissão, renovação, pontuação, bloqueio ou suspensão;
-- Exames teóricos e práticos e cursos de reciclagem;
-- Multas de trânsito ou recursos de infração;
-- Documentação de veículos: registro, licenciamento, transferência ou emplacamento;
-- Vistorias veiculares e comunicação de venda;
-- Questões relacionados ao IPVA do ano corrente;
-- Reclamações sobre atendimento presencial ou digital do DETRAN.
+O Departamento Estadual de Trânsito de Goiás é o órgão responsável por diversos serviços relacionados à Carteira Nacional de Habilitação (CNH), como emitir, renovar, alterar e cassar o documento, além de agendar exames teóricos e práticos e gerenciar a pontuação na carteira, incluindo processos de multas e cursos de reciclagem. O DETRAN também cuida do IPVA, controlando pagamentos, bloqueando licenciamentos por débito e emitindo guias e orientações sobre prazos e parcelamento em conjunto com a Secretaria da Fazenda. Outras funções importantes incluem o licenciamento de veículos com a emissão do CRLV, registro de veículos novos e usados, mudança de propriedade e emplacamento. Em resumo, o DETRAN trata de processos da CNH, multas, licenciamento de veículos e questões do IPVA. É importante notar que denúncias de crimes como fraude em autoescola devem ser direcionadas à SSP, e agendamentos iniciais de CNH via VAPT VUPT são tratados pela SEAD, e não pelo DETRAN. 
