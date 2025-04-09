@@ -5,9 +5,8 @@ import IPASGO_D from '@@/shared/utils/orgs/IPASGO.md'
 import SANEAGO_D from '@@/shared/utils/orgs/SANEAGO.md'
 import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
 import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
-import SSP_D from '@@/shared/utils/orgs/SSP.md'
 import SES_D from '@@/shared/utils/orgs/SES.md'
-
+import SSP_D from '@@/shared/utils/orgs/SSP.md'
 
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
@@ -21,7 +20,6 @@ const ENTITIES_SEDUC = 'SEDUC' as const
 const ENTITIES_SANEAGO = 'SANEAGO' as const
 const ENTITIES_SES = 'SES' as const
 
-
 const ACTION_NONE = 'OUTROS' as const
 
 export const ENTITIES = {
@@ -32,8 +30,8 @@ export const ENTITIES = {
   SSP: ENTITIES_SSP,
   SEAD: ENTITIES_SEAD,
   SEDUC: ENTITIES_SEDUC,
- SANEAGO: ENTITIES_SANEAGO,
- SES: ENTITIES_SES,
+  SANEAGO: ENTITIES_SANEAGO,
+  SES: ENTITIES_SES,
 } as const
 
 export const ACTIONS = {
@@ -112,15 +110,13 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.SES]: {
     description: SES_D,
     examples: [
-      'Fui vítima de um roubo e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
-      'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
-      'Empresa cobrou R$ 2.000 por taxas extras não autorizadas.',
-      'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
-      'Como posso obter informações sobre o andamento de um inquérito policial?',
-      'Perdi meus documentos o que devo fazer?',
-      'Como denunciar uma autoescola ?',
-      'Preciso registrar um BO por roubo de celular.',
-      'Consultar antecedentes criminais para concurso público.',
+      'Como tenho acesso ao quadro clinico de um paciente',
+      'Quero denunciar o hospital do estado',
+      'Não estou conseguindo acesso ao medicamento de alto custo',
+      'A OS responsavel por administrar o hospital não está prestando um bom serviço',
+      'Como posso obter informações sobre o meu historico médico',
+      'Não estou conseguindo agendar uma consulta médica',
+      'Como denunciar uma má conduta médica?',
     ],
   },
   [ENTITIES.SEAD]: {
@@ -149,7 +145,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
 
 export const ACTIONS_CLASSIFICATION_EXAMPLES = {
   [ACTIONS.NONE]: {
-    description: 'Retorne apenas o **nome do órgão** mais adequado (ex: "SES", "SANEAGO", "ECONOMIA"). Se o texto não corresponder a nenhum dos casos acima, retorne: "OUTROS"',
+    description: 'Retorne apenas o **nome do órgão** mais adequado. Se o texto não corresponder a nenhum dos casos acima ou caso você não saiba o órgão correto retorne "OUTROS"',
     examples: [],
   },
 } satisfies Record<ActionValues, { examples: string[], description: string }>
