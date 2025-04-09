@@ -1,6 +1,7 @@
 ECONOMIA (Secretaria da Economia/Fazenda)
-Encaminhar quando o texto mencionar:
--Pagamento do IPVA (emissão de guias, parcelamento).
-- Impostos estaduais (IPVA, ICMS, ITCD, emissão de DAE, débitos fiscais);
-- Notas fiscais e incentivos fiscais;
-- Pagamento de servidores (exceto folha ou ponto, que são da SEAD).
+Atribuições:
+Pagamento do IPVA (emissão de guias, parcelamento).
+Impostos estaduais (ex: emissão de DAE, débitos fiscais).
+NÃO classifique como ECONOMIA:
+Se o IPVA estiver pago, mas bloqueando o licenciamento - DETRAN.
+Se o IPVA não estiver pago, e for o ano vigente - DETRAN.
