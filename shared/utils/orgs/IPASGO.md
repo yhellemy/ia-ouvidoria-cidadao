@@ -1,5 +1,1 @@
-IPASGO – Instituto de Assistência dos Servidores Públicos do Estado de Goiás  
-Encaminhar quando o texto tratar de:
-- Atendimento médico ou hospitalar pelo plano IPASGO;
-- Autorizações, reembolsos, rede credenciada;
-- Reclamações sobre cobertura e agendamentos.
+O Serviço Social Autônomo de Assistência à Saúde dos Servidores Públicos e Militares do Estado de Goiás (IPASGO) é responsável pela administração de serviços, programas especiais e de ações que visam à promoção e assistência à saúde aos servidores públicos de Goiás e de órgãos que mantém convênio com a Instituição. É responsabilidade do IPASGO temas como: atendimento médico ou hospitalar pelo plano IPASGO; autorizações de exames e reclamações sobre cobertura e agendamentos na rede do IPASGO.
