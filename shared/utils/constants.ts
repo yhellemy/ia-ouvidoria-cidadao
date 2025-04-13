@@ -39,6 +39,7 @@ export const ACTIONS = {
 } as const
 
 export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público do departamento de ouvidoria do Estado de Goiás. A tua responsabilidade é ler a mensagem e CLASSIFICAR para qual destes órgãos (AGR, DETRAN, ECONOMIA, IPASGO, SANEAGO, SEAD, SEDUC, SES ou SSP)  a mensagem deverá ser encaminhada. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS. Na sua RESPOSTA retorne APENAS o órgão que você classificou, logo não defina a categoria ou tenha explicações e justificativas.'
+export const CHECK_ORG_SYSTEM_INSTRUCTIONS = `Você é um assistente de IA especialista em verificar se uma mensagem de usuário pertence a um órgão público específico do Estado de Goiás. Sua tarefa é analisar a mensagem fornecida e o órgão em questão. Baseado na descrição e exemplos de tópicos cobertos pelo órgão, responda APENAS com 'true' se a mensagem pertencer ao órgão, ou 'false' caso contrário. Não inclua explicações ou justificativas na sua resposta, apenas o valor booleano.`
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
@@ -191,6 +192,25 @@ export enum AIResponseStatus {
 }
 
 export const CLASSIFY_RESPONSE = {
+  [AIResponseStatus.Success]: {
+    code: 200,
+    message: 'Resposta obtida com sucesso',
+  },
+  [AIResponseStatus.PoorlyFormatted]: {
+    code: 202,
+    message: 'Resposta mal formatada',
+  },
+  [AIResponseStatus.Fished]: {
+    code: 203,
+    message: 'Resposta obtida com sucesso parcial',
+  },
+  [AIResponseStatus.Failed]: {
+    code: 500,
+    message: 'A requisição falhou',
+  },
+} satisfies Record<AIResponseStatus, { code: number, message: string }>
+
+export const CHECK_RESPONSE = {
   [AIResponseStatus.Success]: {
     code: 200,
     message: 'Resposta obtida com sucesso',

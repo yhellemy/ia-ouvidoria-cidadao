@@ -1,5 +1,4 @@
-import type { z } from 'zod'
-import { string, ZodError } from 'zod'
+import { z } from 'zod'
 
 export type ISchema<T extends z.ZodType<string> = z.ZodType<string>> = T
 export interface IPrompt {
@@ -84,6 +83,70 @@ export class ClassificationAgent {
 
     throw new Error('Erro ao classificar resposta da AI', {
       cause: result,
+    })
+  }
+}
+
+export class VerificationAgent {
+  constructor(
+    private readonly model: IModel,
+    private readonly orgName: EntitiesValues, // O órgão específico a ser verificado
+    private readonly orgDescription: string, // Descrição do órgão
+    private readonly orgExamples: string[], // Exemplos do órgão
+    private readonly temperature: number = 0.1, // Temperatura mais baixa para tarefas de verificação
+  ) {}
+
+  private buildPrompt(inputMessage: string): IPrompt {
+    const examplesString = this.orgExamples.join('\n - ')
+
+    const systemInstruction = `${CHECK_ORG_SYSTEM_INSTRUCTIONS}\n\nÓrgão a verificar: ${this.orgName}\nDescrição do ${this.orgName}: ${this.orgDescription}\nExemplos de tópicos do ${this.orgName}:\n - ${examplesString}`
+
+    const message = `Mensagem do usuário: "${inputMessage}"\nA mensagem acima pertence ao órgão ${this.orgName}? Responda APENAS 'true' ou 'false'.\nResposta:`
+
+    return {
+      systemInstruction,
+      message,
+      temperature: this.temperature,
+      schema: z.string(),
+    }
+  }
+
+  async verify(inputMessage: string): Promise<{ status: AIResponseStatus, result: boolean }> {
+    const prompt = this.buildPrompt(inputMessage)
+    const rawResult = await this.model.process(prompt)
+
+    // eslint-disable-next-line no-console
+    console.log(`\n\n############# CHECK ORG #############\n\nMensagem: ${inputMessage}\nÓrgão: ${this.orgName}\n\nResposta Bruta: ${rawResult}`)
+
+    if (typeof rawResult !== 'string') {
+      console.error('AI Returned an invalid datatype for verification')
+      throw new Error('AI Returned an invalid datatype')
+    }
+
+    const trimmedRes = rawResult.trim().toLowerCase()
+    const poorlyFormatted = trimmedRes !== rawResult.toLowerCase() // Verifica se houve espaços ou case diferente
+
+    // Tenta validar como booleano diretamente (true/false)
+    if (trimmedRes === 'true' || trimmedRes === 'false') {
+      const resultBoolean = trimmedRes === 'true'
+      // Valida com o schema Zod para garantir
+      const validatedRes = z.boolean().safeParse(resultBoolean)
+
+      if (validatedRes.success) {
+        return {
+          status: poorlyFormatted
+            ? AIResponseStatus.PoorlyFormatted // Foi ' True ' ou 'TRUE' etc.
+            : AIResponseStatus.Success,
+          result: validatedRes.data,
+        }
+      }
+    }
+
+    console.error('Erro ao verificar resposta da AI (não é booleano claro)', {
+      cause: rawResult,
+    })
+    throw new Error('Erro ao verificar resposta da AI: formato inválido', {
+      cause: rawResult,
     })
   }
 }

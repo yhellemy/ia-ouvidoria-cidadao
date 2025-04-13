@@ -29,6 +29,13 @@ export const modelDataSchema = z.object({
   failsRange: z.number().optional(),
 })
 
+export const modelCheckDataSchema = z.object({
+  org: entitySchema,
+  message: z.string(),
+  fails: z.number().optional(),
+  failsRange: z.number().optional(),
+})
+
 export const agentResponseSchema = allOptions
 
 export const googleBody = z.object({
@@ -53,3 +60,4 @@ export const discriminatedModelSchema = z.discriminatedUnion('vendor', [
 ])
 
 export const inferBodySchema = discriminatedModelSchema.and(modelDataSchema).or(modelDataSchema)
+export const checkOrgSchema = discriminatedModelSchema.and(modelCheckDataSchema).or(modelCheckDataSchema)
