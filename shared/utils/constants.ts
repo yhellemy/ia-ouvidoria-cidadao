@@ -130,7 +130,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como faço para me inscrever no processo seletivo para trabalhar no Vapt Vupt?',
       'Gostaria de informações sobre concursos públicos abertos para o estado de goias',
       'Quando sai o pagamento dos servidores estaduais?',
-      'Consulta ao extrato do Aluguel Social 2024.',
+      'Quero agendar a renovação da minha CNH ',
       'Edital de concurso para servidor estadual de Goiás',
     ],
   },
