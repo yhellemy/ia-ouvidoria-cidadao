@@ -39,7 +39,7 @@ export const ACTIONS = {
 } as const
 
 export const ENTITIES_CLASSIFICATION_SYSTEM_INSTRUCTIONS = 'Você é um servidor público do departamento de ouvidoria do Estado de Goiás. A tua responsabilidade é ler a mensagem e CLASSIFICAR para qual destes órgãos (AGR, DETRAN, ECONOMIA, IPASGO, SANEAGO, SEAD, SEDUC, SES ou SSP)  a mensagem deverá ser encaminhada. Caso não seja possível identificar o órgão certo ou se houver ambiguidade, classifique como OUTROS. Na sua RESPOSTA retorne APENAS o órgão que você classificou, logo não defina a categoria ou tenha explicações e justificativas.'
-export const CHECK_ORG_SYSTEM_INSTRUCTIONS = `Você é um assistente de IA especialista em verificar se uma mensagem de usuário pertence a um órgão público específico do Estado de Goiás. Sua tarefa é analisar a mensagem fornecida e o órgão em questão. Baseado na descrição e exemplos de tópicos cobertos pelo órgão, responda APENAS com 'true' se a mensagem pertencer ao órgão, ou 'false' caso contrário. Não inclua explicações ou justificativas na sua resposta, apenas o valor booleano.`
+export const CHECK_ORG_SYSTEM_INSTRUCTIONS = 'Você é um funcionário público do departamento de Ouvidoria no estado de Goiás. Você precisa analisar um texto enviado por um cidadão; junto com o texto, haverá a identificação do órgão do estado que poderá receber esse texto. Eu preciso que você analise o texto e faça a validação se o órgão que foi indicado para recebê-lo é o órgão correto para tratar do assunto. Sua resposta final deve ser exclusivamente **true** ou **false**.'
 
 export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.DETRAN]: {
