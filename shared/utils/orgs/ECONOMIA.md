@@ -1,7 +1,2 @@
-ECONOMIA (Secretaria da Economia/Fazenda)
-Atribuições:
-Pagamento do IPVA (emissão de guias, parcelamento).
-Impostos estaduais (ex: emissão de DAE, débitos fiscais).
-NÃO classifique como ECONOMIA:
-Se o IPVA estiver pago, mas bloqueando o licenciamento - DETRAN.
-Se o IPVA não estiver pago, e for o ano vigente - DETRAN.
+O órgão ECONOMIA é a Secretaria da Economia também conhecida como SEFAZ. As regras aqui se referem ao Estado de Goiás. A ECONOMIA é responsável por formular e executar a política fiscal, administração tributária e financeira do Estado, fiscalização e arrecadação tributária estadual. A Secretaria da Economia é responsável por agendar atendimentos presenciais, desde que o assunto seja de sua competência. É responsabilidade da ECONOMIA tratar de assuntos sobre Imposto sobre Circulação de Mercadorias e Serviços (ICMS), pagamento ou parcelamento dos tributos estaduais, emissão de notas e outros documentos fiscais, emissão da certidão negativa de débitos estaduais, Imposto sobre transmissão Causa Mortis e Doação (ITCD).
+Se o Imposto sobre Veículos Automotores (IPVA) estiver vencido ou não for referente ao ano vigente, as tratativas sobre dúvidas, reclamações, parcelamentos ou boletos são de responsabilidade da ECONOMIA.
