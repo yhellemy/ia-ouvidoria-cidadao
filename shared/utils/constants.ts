@@ -54,6 +54,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Não consigo emitir minha CNH após aprovação no exame.',
       'O site do DETRAN não mostra o valor da multa.',
       'Não estou conseguindo contestar multas',
+      'Minha multa ainda não venceu, como posso obter o desconto de 40% ou 20% no valor da multa?',
     ],
   },
   [ENTITIES.ECONOMIA]: {
