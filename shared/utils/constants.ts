@@ -100,7 +100,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
     examples: [
       'Fui vítima de um roubo e gostaria de registrar um boletim de ocorrência online.  Qual o site correto?',
       'Quero fazer uma denúncia anônima sobre tráfico de drogas na minha vizinhança em Goiânia.',
-      'Empresa cobrou R$ 2.000 por taxas extras não autorizadas.',
+      'Fiz uma compra online e a empresa não entregou o pedido',
       'Há um aumento significativo de assaltos na minha rua.  É possível aumentar o policiamento ostensivo na região?',
       'Como posso obter informações sobre o andamento de um inquérito policial?',
       'Perdi meus documentos o que devo fazer?',
