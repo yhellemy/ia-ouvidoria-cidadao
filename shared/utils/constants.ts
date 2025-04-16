@@ -107,6 +107,9 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como denunciar uma autoescola ?',
       'Preciso registrar um BO por roubo de celular.',
       'Consultar antecedentes criminais para concurso público.',
+      'A empresa está violando o código de defesa do consumidor',
+      'A minha indentidade está pronta?',
+      'Houve um acidente de trânsito na avenida',
     ],
   },
   [ENTITIES.SES]: {
@@ -118,7 +121,6 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'A OS responsavel por administrar o hospital não está prestando um bom serviço',
       'Como posso obter informações sobre o meu historico médico',
       'Não estou conseguindo agendar uma consulta médica',
-      'Como denunciar uma má conduta médica?',
     ],
   },
   [ENTITIES.SEAD]: {
