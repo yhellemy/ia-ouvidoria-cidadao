@@ -1,7 +1,2 @@
-Secretaria de Segurança Pública (SSP) é responsável por promover a gestão da segurança pública e defesa social, de forma planejada, integrada e inteligente, para contribuir com a paz social e o bem-estar da população no Estado de Goiás. E de responsabilidade da SSP temas como: 
-Denúncias criminais envolvendo autoescolas ou empresas (ex: falsificação de aulas, extorsão).
-Fraudes em processos de CNH (ex: venda de carteiras falsas).
-Abuso de autoridade por agentes de trânsito (ex: multas ilegais com propina).
-Registro de BOs (roubo de veículos, violência no trânsito).
-NÃO classifique como SSP:
-Problemas administrativos de CNH (ex: atraso na emissão) - DETRAN
+A SSP é a Secretaria de Segurança Pública. As regras aqui se referem ao Estado de Goiás. A SSP é responsável por promover a gestão da segurança pública e defesa social, de forma planejada, integrada e inteligente, para contribuir com a paz social e o bem-estar da população no Estado de Goiás. A SSP é órgão que faz boletim de ocorrência (BO). A SSP é a secretaria que cuida de denúncias contra condutas criminais e infração de servidores públicos do Estado de Goiás. Denúncias criminais envolvendo autoescolas ou empresas privadas são de responsabilidade da SSP. Também é responsabilidade da SSP tratar de assuntos relacionados a roubo de veículos, violência no trânsito, multas ilegais com propina, abuso de autoridade e fraudes no processo da CNH.
+A SSP é responsável por tratar de assuntos como: tráfico de drogas, tráfico de pessoas, contrabando de mercadorias lícitas e ilícitas. A SSP é responsável pelo Programa de Proteção e Defesa do Consumidor (PROCON). Logo, questões relacionadas a consumo, golpes, produtos inseguros e tratamento injusto por parte de empresas devem ser encaminhadas à SSP.
