@@ -7,6 +7,7 @@ import SEAD_D from '@@/shared/utils/orgs/SEAD.md'
 import SEDUC_D from '@@/shared/utils/orgs/SEDUC.md'
 import SES_D from '@@/shared/utils/orgs/SES.md'
 import SSP_D from '@@/shared/utils/orgs/SSP.md'
+import UEG_D from '@@/shared/utils/orgs/UEG.md'
 
 import { HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
 
@@ -19,6 +20,7 @@ const ENTITIES_SEAD = 'SEAD' as const
 const ENTITIES_SEDUC = 'SEDUC' as const
 const ENTITIES_SANEAGO = 'SANEAGO' as const
 const ENTITIES_SES = 'SES' as const
+const ENTITIES_UEG = 'UEG' as const
 
 const ACTION_NONE = 'OUTROS' as const
 
@@ -32,6 +34,7 @@ export const ENTITIES = {
   SEDUC: ENTITIES_SEDUC,
   SANEAGO: ENTITIES_SANEAGO,
   SES: ENTITIES_SES,
+  UEG: ENTITIES_UEG,
 } as const
 
 export const ACTIONS = {
@@ -144,6 +147,18 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Como posso conseguir o cartão Bolsa de estudo?',
       'Não estou conseguindo vaga no colégio estadual para o turno matutino.',
       'Quando serão as matrículas escolares para o próximo ano?',
+    ],
+  },
+
+  [ENTITIES.UEG]: {
+    description: UEG_D,
+    examples: [
+      'Não estou conseguindo solicitar meu diploma de conclusão de curso.',
+      'Como posso ser fiscal na univesidade estadual de Goías',
+      'Não estou conseguindo me matricular nas disciplinas desse semestre',
+      'Venho denúnciar a conduta da professora da UEG',
+      'Como é calculado a média global?',
+      'Quero participar da colação de grau.',
     ],
   },
 } satisfies Record<EntitiesValues, { examples: string[], description: string }>

@@ -1,0 +1,1 @@
+Universidade Estadual de Goiás (UEG) é uma instituição pública de ensino superios que oferece cursos de graduação, pós graduação, extensão e pesquisa em diversas áreas do conhecimento.
