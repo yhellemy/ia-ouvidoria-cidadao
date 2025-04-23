@@ -138,6 +138,8 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Quando sai o pagamento dos servidores estaduais?',
       'Quero agendar a renovação da minha CNH ',
       'Edital de concurso para servidor estadual de Goiás',
+      'Não estou conseguindo solicitar a segunda via do meu RG',
+      'Quero tirar o meu RG',
     ],
   },
   [ENTITIES.SEDUC]: {
