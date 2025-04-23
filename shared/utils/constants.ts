@@ -113,6 +113,8 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'A empresa está violando o código de defesa do consumidor',
       'A minha indentidade está pronta?',
       'Houve um acidente de trânsito na avenida',
+      'Não estou conseguindo solicitar a segunda via do meu RG',
+      'Quero tirar o meu RG',
     ],
   },
   [ENTITIES.SES]: {
@@ -138,8 +140,6 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Quando sai o pagamento dos servidores estaduais?',
       'Quero agendar a renovação da minha CNH ',
       'Edital de concurso para servidor estadual de Goiás',
-      'Não estou conseguindo solicitar a segunda via do meu RG',
-      'Quero tirar o meu RG',
     ],
   },
   [ENTITIES.SEDUC]: {
