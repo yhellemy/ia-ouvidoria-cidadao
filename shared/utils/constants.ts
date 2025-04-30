@@ -120,7 +120,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.SES]: {
     description: SES_D,
     examples: [
-      'Como tenho acesso ao quadro clinico de um paciente',
+      'Como tenho acesso ao quadro clipessoaisnico de um paciente',
       'Quero denunciar o hospital do estado',
       'Não estou conseguindo acesso ao medicamento de alto custo',
       'A OS responsavel por administrar o hospital não está prestando um bom serviço',
@@ -131,7 +131,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
   [ENTITIES.SEAD]: {
     description: SEAD_D,
     examples: [
-      'Eu gostaria de renovar meu documentos pessoais.',
+      'Eu gostaria de renovar meu RG.',
       'Como agendar a CNH pelo site VAPT VUPT?',
       'Estou bloqueado para agendar um atendimento',
       'Eu queria reagendar um atendimento no Vapt Vupt',
@@ -140,6 +140,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Quando sai o pagamento dos servidores estaduais?',
       'Quero agendar a renovação da minha CNH ',
       'Edital de concurso para servidor estadual de Goiás',
+      'Quero agendamento para emissão do CIN',
     ],
   },
   [ENTITIES.SEDUC]: {
