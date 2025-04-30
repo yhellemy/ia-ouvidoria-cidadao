@@ -132,6 +132,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
     description: SEAD_D,
     examples: [
       'Eu gostaria de renovar meu RG.',
+      'Eu gostaria de renovar meus documentos pessoais.',
       'Como agendar a CNH pelo site VAPT VUPT?',
       'Estou bloqueado para agendar um atendimento',
       'Eu queria reagendar um atendimento no Vapt Vupt',
