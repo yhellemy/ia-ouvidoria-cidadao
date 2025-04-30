@@ -58,6 +58,8 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'O site do DETRAN não mostra o valor da multa.',
       'Não estou conseguindo contestar multas',
       'Minha multa ainda não venceu, como posso obter o desconto de 40% ou 20% no valor da multa?',
+      'Minha CNH venceu e não consigo renovar',
+      'Quero saber sobre pontos na minha carteira de motorista',
     ],
   },
   [ENTITIES.ECONOMIA]: {
@@ -132,7 +134,7 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
     description: SEAD_D,
     examples: [
       'Eu gostaria de renovar meu RG.',
-      'Eu gostaria de renovar meus documentos pessoais.',
+      'Eu gostaria de agendar a renovação dos meus documentos pessoais.',
       'Como agendar a CNH pelo site VAPT VUPT?',
       'Estou bloqueado para agendar um atendimento',
       'Eu queria reagendar um atendimento no Vapt Vupt',
@@ -141,7 +143,8 @@ export const ENTITIES_CLASSIFICATION_EXAMPLES = {
       'Quando sai o pagamento dos servidores estaduais?',
       'Quero agendar a renovação da minha CNH ',
       'Edital de concurso para servidor estadual de Goiás',
-      'Quero agendamento para emissão do CIN',
+      'Não consigo agendar emissão da CIN',
+      'Estou tentando tirar RG no Vapt Vupt e nunca tem vaga',
     ],
   },
   [ENTITIES.SEDUC]: {
