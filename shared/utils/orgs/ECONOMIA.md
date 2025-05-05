@@ -2,7 +2,9 @@ O órgão ECONOMIA é a Secretaria da Economia também conhecida como SEFAZ. As 
 Se o Imposto sobre Veículos Automotores (IPVA) estiver vencido, as tratativas sobre dúvidas, reclamações ou pagamentos são de responsabilidade da ECONOMIA.
 
 A ECONOMIA NÃO é responsável por:
-**Assuntos sobre o IPVA NÃO vencido (isso é com o DETRAN)**
+**Assuntos sobre o IPVA antes do vencimento da parcela**
+
+**Assuntos sobre o sistema/portal que puxa a guia para o pagamento do IPVA ano corrente**
 
 **Denúncias sobre o IPASGO, inclusive sobre coparticipação**
 
