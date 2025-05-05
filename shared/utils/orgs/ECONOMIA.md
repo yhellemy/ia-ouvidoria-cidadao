@@ -4,7 +4,7 @@ Se o Imposto sobre Veículos Automotores (IPVA) estiver vencido, as tratativas s
 A ECONOMIA NÃO é responsável por:
 **Imposto sobre Veículos Automotores (IPVA) não vencidos, parcelamentos e boletos**
 
-**Parcelamento do IPVA**
+**Liberação do boleta para pagamento da primeira parcela do IPVA**
 
 **Conceder o desconto de até 40% no valor das multas por infração de trânsito**
 
